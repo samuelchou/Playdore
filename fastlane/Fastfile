@@ -23,6 +23,7 @@ platform :android do
 
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
+    bump()
     gradle(task: "clean assembleRelease")
     crashlytics
   
@@ -32,7 +33,20 @@ platform :android do
 
   desc "Deploy a new version to the Google Play"
   lane :deploy do
+    bump()
     gradle(task: "clean assembleRelease")
     upload_to_play_store
+  end
+
+  desc "Update build number by commits"
+  lane :bump do
+    path = '../app/build.gradle'
+    re = /versionCode\s+(\d+)/
+    s = File.read(path)
+    versionCode = s[re, 1].to_i
+    s[re, 1] = (number_of_commits).to_s
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
   end
 end
