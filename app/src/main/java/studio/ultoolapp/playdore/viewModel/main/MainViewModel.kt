@@ -1,4 +1,4 @@
-package studio.ultoolapp.playdore.ui.main
+package studio.ultoolapp.playdore.viewModel.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,8 +1,8 @@
-package studio.ultoolapp.playdore
+package studio.ultoolapp.playdore.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import studio.ultoolapp.playdore.ui.main.MainFragment
+import studio.ultoolapp.playdore.R
 
 class MainActivity : AppCompatActivity() {
 
