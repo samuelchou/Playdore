@@ -4,6 +4,7 @@
     package="studio.ultoolapp.playdore">
 
     <application
+        android:name=".ui.main.PlaydoreApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
