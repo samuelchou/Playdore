@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import dagger.hilt.android.AndroidEntryPoint
 import studio.ultoolapp.playdore.databinding.FragmentMainBinding
 import studio.ultoolapp.playdore.viewModel.main.MainViewModel
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
     companion object {
         fun newInstance() = MainFragment()
