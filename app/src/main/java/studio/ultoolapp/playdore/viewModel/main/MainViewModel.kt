@@ -2,11 +2,14 @@ package studio.ultoolapp.playdore.viewModel.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import studio.ultoolapp.playdore.repository.WelcomeRepository
-import studio.ultoolapp.playdore.repository.WelcomeRepositoryImpl
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
-    private val repository: WelcomeRepository = WelcomeRepositoryImpl()
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val repository: WelcomeRepository,
+) : ViewModel() {
 
     val message = MutableLiveData("Initialization")
 
